@@ -1,0 +1,126 @@
+{% extends 'HealthCare/homebase.html' %} {% load static %} {% block content %}
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title {
+    color: grey;
+    font-size: 18px;
+  }
+
+  button {
+    border: none;
+    outline: none;
+    padding: 10px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    margin-top: 10px;
+    transition: opacity 0.3s ease;
+  }
+
+  button:hover,
+  a:hover {
+    opacity: 0.7;
+  }
+
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .header {
+    position: relative; /* Fixed typo */
+    width: 100%;
+    max-width: 990px;
+    margin: auto;
+  }
+
+  .doctorimg {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  .overlay p {
+    margin-bottom: 10px;
+  }
+
+  .overlay .btn {
+    margin: 5px;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header {
+      width: 90%;
+    }
+
+    .overlay {
+      width: 80%;
+      padding: 15px;
+    }
+
+    .overlay p {
+      font-size: 14px;
+    }
+
+    .overlay .btn {
+      font-size: 14px;
+      padding: 8px 12px;
+    }
+  }
+</style>
+
+<div class="header">
+  <img class="doctorimg" src="{% static 'images/b3.jpg' %}" alt="Doctor" />
+  <div class="overlay">
+    <p><b>PATIENT SIGN UP/LOGIN</b></p>
+    <p>You can access various features after Login/SignUp.</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="/patientsignup" role="button"
+        >Register</a
+      >
+      <a class="btn btn-success btn-lg" href="/patientlogin" role="button"
+        >Login</a
+      >
+    </p>
+  </div>
+</div>
+
+{% endblock content %}

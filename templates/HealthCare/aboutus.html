@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>About Us</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style media="screen">
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      background-color: #f8f9fa; /* Light gray background color */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .jumbotron h1 {
+      text-align: center;
+      color: #007BFF; /* Blue title color */
+    }
+
+    .jumbotron p {
+      font-size: 16px;
+    }
+
+    .jumbotron hr {
+      border-top: 1px solid #ccc;
+    }
+
+    .alert {
+      margin: 0px;
+    }
+  </style>
+</head>
+
+<body>
+  {% include "HealthCare/navbar.html" %}
+  <br><br>
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="display-4">Mental HealthCare Facility Management</h1>
+      <p>
+        Welcome to MentalHealthCare Facility, your trusted partner in managing mental health services. Our mission is to provide
+        advanced and comprehensive mental healthcare solutions to patients, therapists, and administrators.
+    </p>
+    <p>
+        At MentalHealthCare Facility, we believe in seamless mental healthcare management that empowers both patients and mental
+        health professionals. Our platform offers efficient appointment scheduling, patient records management, and streamlined
+        communication between therapists and patients.
+    </p>
+    <p>
+        Our team consists of dedicated professionals from both mental healthcare and technology backgrounds. We understand
+        the unique challenges faced by mental healthcare facilities and aim to address them through innovative solutions.
+        Whether you're a patient seeking quality mental health care or a therapist looking to enhance your practice,
+        MentalHealthCare Facility is here to make your experience smooth, efficient, and secure.
+    </p>
+    
+
+      <hr class="my-4">
+      <p>Explore our website:</p>
+      <p class="lead">
+        <a class="btn btn-success btn-lg" href="/" role="button">HOME</a>
+      </p>
+    </div>
+  </div>
+  {% include "HealthCare/footer.html" %}
+</body>
+
+</html>

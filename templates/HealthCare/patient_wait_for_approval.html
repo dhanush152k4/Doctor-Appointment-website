@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>HealthCare Facility</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .jumbotron {
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        color: white;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        max-width: 600px;
+        margin: auto;
+      }
+
+      .jumbotron h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+
+      .jumbotron p {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+
+      .btn-primary {
+        background-color: #ff4757;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        color: white;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background-color: #e84118;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .jumbotron {
+          width: 90%;
+          padding: 30px;
+        }
+
+        .jumbotron h1 {
+          font-size: 24px;
+        }
+
+        .jumbotron p {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    {% include "HealthCare/navbar.html" %}
+
+    <div class="jumbotron">
+      <h1>Hello, {{ request.user.first_name }}!</h1>
+      <p>
+        Your account has not been approved yet.<br /><br />
+        Our team is currently reviewing your profile.<br /><br />
+        You will be notified once your account is confirmed!
+      </p>
+      <hr class="my-4" />
+      <p>Please check back later.</p>
+      <p>
+        <a class="btn-primary" href="/logout" role="button">Logout for Now</a>
+      </p>
+    </div>
+
+    {% include "HealthCare/footer.html" %}
+  </body>
+</html>

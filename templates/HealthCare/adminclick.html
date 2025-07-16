@@ -1,0 +1,99 @@
+{% extends 'HealthCare/homebase.html' %} {% load static %} {% block content %}
+<style>
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title {
+    margin-left: 4%;
+    color: yellow;
+    font-size: 20px;
+  }
+  .btn {
+    margin-left: 19%;
+  }
+  button {
+    border: none;
+    margin: 10px;
+    outline: 0;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  button:hover,
+  a:hover {
+    opacity: 0.7;
+  }
+
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  a:link {
+    text-decoration: none;
+  }
+
+  a {
+    color: white;
+  }
+  .footer {
+    margin-top: 0;
+  }
+  .header {
+    sition: relative;
+    width: 990px;
+    height: 990px;
+  }
+  .overlay {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: grey;
+    padding: 20px;
+  }
+</style>
+
+{% comment %}
+<div class="jumbotron" style="margin-bottom: 0px">
+  <h1 class="display-4" style="text-align: center"><b>Welcome! Admin</b></h1>
+  <p class="lead">Welcome to Mental HealthCare Facility Management.</p>
+  <hr class="my-4" />
+</div>
+{% endcomment %} {% comment %}
+<div class="grid-container">
+  <div class="grid-item">
+    <div class="card">
+      <img src="{% static "images/admin1.jpeg" %}" alt="John"
+      style="width:100%">
+    </div>
+  </div>
+</div>
+{% endcomment %}
+<div class="header">
+  <img src="{% static "images/b8.jpg" %}" alt="img">
+  <div class="overlay">
+    <p class="title">ADMIN</p>
+    <a class="btn btn-success btn-lg" href="/adminlogin" role="button">Login</a>
+  </div>
+</div>
+
+{% endblock content %}
